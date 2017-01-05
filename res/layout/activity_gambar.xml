@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/background">
+    
+    <com.google.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/gambar"
+            ads:adSize="BANNER"
+            ads:adUnitId="a15336dfed2f60b"
+            ads:loadAdOnCreate="true"
+            ads:testDevices="TEST_EMULATOR, TEST_DEVICE_ID" >
+        </com.google.ads.AdView>
+   <ImageView
+   		   
+   		    android:id="@+id/gambar"
+   		    android:layout_width="wrap_content"
+   		    android:layout_height="wrap_content"
+   		    android:layout_alignParentTop="true"
+   		    android:layout_centerHorizontal="true"
+   		    android:src="@drawable/background" />
+    
+    <Button
+        android:id="@+id/buttonInfo"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="70dp"
+   		android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/button1"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_toRightOf="@+id/button1"
+        android:background="@drawable/button"
+        android:text="Info"
+        android:visibility="invisible"
+         />
+
+   		<ScrollView
+   		    android:layout_width="match_parent"
+   		    android:layout_height="fill_parent"
+   		    android:id="@+id/ScrollView1"
+   		    android:layout_alignParentBottom="true"
+   		    android:layout_below="@id/button1" >
+        
+   		 <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        
+        <ImageView
+       
+        android:id="@+id/image_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="19dp"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/background" />
+
+        
+    </RelativeLayout>
+        
+        
+    </ScrollView>
+
+   		<Button
+   		    android:id="@+id/button1"
+   		    style="?android:attr/buttonStyleSmall"
+   		    android:layout_width="70dp"
+   		    android:layout_height="50dp"
+   		    android:layout_alignLeft="@+id/gambar"
+   		    android:layout_below="@+id/gambar"
+   		    android:layout_marginLeft="65dp"
+   		    android:background="@drawable/button"
+   		    android:text="Back" />
+   		
+   		
+</RelativeLayout>
